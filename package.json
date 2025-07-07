@@ -9,13 +9,32 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "pushupCounter",
+          "name": "Pushup Counter",
+          "contextualTitle": "Pushups"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "pushup.helloWorld",
-        "title": "Hello World"
+        "command": "pushup.startCount",
+        "title": "Start Counting Pushups",
+        "category": "Pushup Counter"
+      },
+      {
+        "command": "pushup.stopCount",
+        "title": "Stop Counting Pushups",
+        "category": "Pushup Counter"
+      },
+      {
+        "command": "pushup.resetCount",
+        "title": "Reset Pushup Count",
+        "category": "Pushup Counter"
       }
     ]
   },
