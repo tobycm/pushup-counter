@@ -1,3 +1,5 @@
+// shoutout to https://github.com/virejdasani/Incredibly-InYourFace/blob/main/src/extension.ts
+
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -77,12 +79,11 @@ class PushupCounterProvider implements vscode.TreeDataProvider<vscode.TreeItem> 
 
     // Create the tree items to display in the sidebar.
     const countItem = new vscode.TreeItem(`Total Push-ups: ${pushupCount}`);
-    const infoItem = new vscode.TreeItem("Save a file with errors to add more!");
 
     // Set a custom icon for the count item.
     countItem.iconPath = new vscode.ThemeIcon("flame"); // 📛
 
-    return Promise.resolve([countItem, infoItem]);
+    return Promise.resolve([countItem]);
   }
 }
 
